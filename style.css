@@ -1,0 +1,107 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  box-shadow: 0 0 15px rgba(255,0,0,0.4);
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f44336;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1626808642879-636f1e4a7a7a?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 20px;
+  animation: zoomIn 1.5s ease;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #f44336; /* Iron Man Red */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #ff0000;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  background: #2020ff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.btn:hover {
+  background: #f44336;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
